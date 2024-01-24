@@ -11,18 +11,18 @@
 
     <modules>
         <module>flink-learning-common</module>
-        <module>flink-learning-connectors</module>
-        <module>flink-learning-sql</module>
+<!--        <module>flink-learning-connectors</module>-->
+<!--        <module>flink-learning-sql</module>-->
         <module>flink-learning-examples</module>
-        <module>flink-learning-monitor</module>
-        <module>flink-learning-core</module>
-        <module>flink-learning-project</module>
-        <module>flink-learning-configuration-center</module>
-        <module>flink-learning-basic</module>
-        <module>flink-learning-cdc</module>
-        <module>flink-learning-datalake</module>
-        <module>flink-learning-extends</module>
-        <module>flink-learning-k8s</module>
+<!--        <module>flink-learning-monitor</module>-->
+<!--        <module>flink-learning-core</module>-->
+<!--        <module>flink-learning-project</module>-->
+<!--        <module>flink-learning-configuration-center</module>-->
+<!--        <module>flink-learning-basic</module>-->
+<!--        <module>flink-learning-cdc</module>-->
+<!--        <module>flink-learning-datalake</module>-->
+<!--        <module>flink-learning-extends</module>-->
+<!--        <module>flink-learning-k8s</module>-->
     </modules>
 
     <properties>

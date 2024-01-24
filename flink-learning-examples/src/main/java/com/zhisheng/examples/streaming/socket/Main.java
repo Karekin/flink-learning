@@ -41,12 +41,20 @@ public class Main {
         env.execute("Java WordCount from SocketTextStream Example");
     }
 
+    /**
+     * 泛型参数<String, Tuple2<String, Integer>>表明这个函数接收String类型的输入，输出是Tuple2<String, Integer>类型的元组。
+     */
     public static final class LineSplitter implements FlatMapFunction<String, Tuple2<String, Integer>> {
         @Override
         public void flatMap(String s, Collector<Tuple2<String, Integer>> collector) {
+            // 输入字符串s首先被转换为小写，然后使用正则表达式\\W+分割。
+            // 这个正则表达式匹配任何非单词字符（等同于[^a-zA-Z0-9_]），
+            // 所以它根据任何非字母数字的字符串来分割文本，比如空格、标点符号等。
             String[] tokens = s.toLowerCase().split("\\W+");
 
             for (String token: tokens) {
+                // 如果token是一个有效的字符串（长度大于0），这行代码将创建一个新的元组，
+                // 其中包含单词和整数1（作为计数），并使用collector将其添加到输出中。
                 if (token.length() > 0) {
                     collector.collect(new Tuple2<String, Integer>(token, 1));
                 }
